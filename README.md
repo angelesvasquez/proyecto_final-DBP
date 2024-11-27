@@ -1,4 +1,4 @@
-# Proyecto Flask: Sistema de Compras
+# Proyecto Flask: Alpamayo
 
 Este proyecto es una plataforma de compras donde los usuarios pueden registrarse, iniciar sesión, gestionar su cuenta, ver productos y agregar artículos a su carrito de compras. Además de tener un panel de administrador para gestionar productos, usuarios y ver pedidos.
 
