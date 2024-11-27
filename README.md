@@ -61,3 +61,33 @@ Los usuarios pueden gestionar su carrito de compras:
 
 ### 8. **Cierre de Sesión**
 Los usuarios pueden cerrar sesión en cualquier momento, lo que limpia los datos de la sesión y los redirige a la página principal.
+
+---
+## Funcionalidades para el Administrador
+
+### 1. **Inicio de Sesión del Administrador**
+Los administradores inician sesión proporcionando su nombre de usuario y contraseña:
+- Si las credenciales son correctas y el rol es `id_rol = 1`, se establece una sesión activa.
+- El administrador puede acceder al panel de administración.
+
+### 2. **Panel de Administración**
+Acceso exclusivo para administradores. Desde este panel, el administrador puede:
+- **Gestionar productos**: Agregar, modificar o eliminar productos.
+- **Gestionar usuarios**: Modificar o eliminar usuarios.
+- **Ver pedidos**: Ver todos los pedidos realizados por los usuarios.
+
+### 3. **Gestión de Productos**
+El administrador puede:
+- Agregar productos con nombre, descripción, precio, descuento y una imagen.
+- Modificar productos existentes.
+- Eliminar productos de la base de datos.
+
+### 4. **Gestión de Usuarios**
+El administrador puede:
+- Modificar datos de usuarios (email, teléfono).
+- Eliminar usuarios, eliminando también su carrito de compras.
+
+### 5. **Visualización de Pedidos**
+El administrador puede ver todos los pedidos realizados en la plataforma.
+
+---
