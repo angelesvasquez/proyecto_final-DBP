@@ -1,0 +1,17 @@
+{% include 'header.html' %}
+<div class="main-content">
+    <div class="mi-cuenta">
+        <h1>Mi Cuenta</h1>
+        <ul class="detalle-cuenta">
+            <li><strong>Email:</strong> {{ cliente['email'] }}</li>
+            <li><strong>Nombre:</strong> {{ cliente['nombres'] }} {{ cliente['apellidos'] }}</li>
+            <li><strong>Teléfono:</strong> {{ cliente['telefono'] }}</li>
+            <li><strong>Usuario:</strong> {{ cliente['usuario'] }}</li>
+        </ul>
+        <div class="btn-cuenta">
+            <a class="volver-inicio" href="{{ url_for('index') }}">Volver al inicio</a>
+            <a class="volver-inicio" href="{{ url_for('editar_cuenta') }}">Editar datos</a>
+        </div>
+    </div>
+</div>
+    {% include 'footer.html' %}

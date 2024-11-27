@@ -1,0 +1,46 @@
+{% include 'header.html' %}
+<div class="main-content">
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        <div class="container mt-3">
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">{{ message }}</div>
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endwith %}
+
+<div class="container-items">
+    {% for producto in productos %}
+
+    <div class="item">
+        <img src="{{ url_for('static', filename='img/productos/' + producto.id|string + '/item.png') }}" alt="{{ producto.nombre }}" class="item-img">
+        <div class="info-producto">
+            <h3>{{ producto.nombre }}</h3>
+            <div class="precio_detalle">
+                {% if producto.descuento > 0 %}
+                    <p class="price"><del>{{ MONEDA }} {{ producto.precio_base }}</del></p>
+                    <p class="price-desc">{{ MONEDA }} {{ producto.precio_final }}</p>
+                {% else %}
+                    <p class="price">{{ MONEDA }} {{ producto.precio_final }}</p>
+                {% endif %}
+            </div>
+            <a href="{{ url_for('detalles_producto', id=producto.id, token=producto.token)}}">Ver Detalles</a>
+    
+            <form action="{{ url_for('agregar_producto_carrito') }}" method="post" class="form-agregar-carrito">
+                <input type="hidden" name="id_producto" value="{{ producto.id }}">
+                <label for="cantidad-{{ producto.id }}" class="form-label">Cantidad:</label>
+                <input type="number" id="cantidad-{{ producto.id }}" name="cantidad" value="1" min="1" class="form-input">
+                <button type="submit" class="btn-agregar-carrito">Agregar al carrito</button>
+            </form>
+            
+        </div>
+    </div>
+
+    
+
+    {% endfor %}
+</div>
+</div>
+
+{% include 'footer.html' %}
