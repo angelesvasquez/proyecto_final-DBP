@@ -1,6 +1,6 @@
 # Proyecto Flask: Sistema de Compras
 
-Este proyecto es una plataforma de compras donde los usuarios pueden registrarse, iniciar sesión, gestionar su cuenta, ver productos y agregar artículos a su carrito de compras.
+Este proyecto es una plataforma de compras donde los usuarios pueden registrarse, iniciar sesión, gestionar su cuenta, ver productos y agregar artículos a su carrito de compras. Además de tener un panel de administrador para gestionar productos, usuarios y ver pedidos.
 
 ## Funcionalidades del Cliente
 
@@ -78,7 +78,7 @@ Acceso exclusivo para administradores. Desde este panel, el administrador puede:
 
 ### 3. **Gestión de Productos**
 El administrador puede:
-- Agregar productos con nombre, descripción, precio, descuento y una imagen.
+- Agregar productos con nombre, descripción, precio, estado, descuento y una imagen.
 - Modificar productos existentes.
 - Eliminar productos de la base de datos.
 
@@ -90,7 +90,8 @@ El administrador puede:
 ### 5. **Visualización de Pedidos**
 El administrador puede ver todos los pedidos realizados en la plataforma.
 - Productos comprados
-- Cantidades
-- Precios
-- Estado de los pedidos
+- Cliente que realizo la compra
+- Fecha del pedido
+- Precio Total
+
 ---
