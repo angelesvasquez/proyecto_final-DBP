@@ -89,5 +89,8 @@ El administrador puede:
 
 ### 5. **Visualización de Pedidos**
 El administrador puede ver todos los pedidos realizados en la plataforma.
-
+- Productos comprados
+- Cantidades
+- Precios
+- Estado de los pedidos
 ---
